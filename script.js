@@ -77,7 +77,7 @@ resetGame.addEventListener('click',function(e){
   COLORS=[];
     //get how the user wants the name of the color to display 
   generateCardArray(numberOfCards.value);
-  matchesPossible=numberOfCards.value/2;
+  matchesPossible=COLORS.length/2;
   //show the best score
   if(bestScore[matchesPossible]===null || bestScore[matchesPossible]===undefined){
     showBestScore.value='';
