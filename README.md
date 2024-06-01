@@ -1,6 +1,6 @@
 # MemoryGame
 A fun little color-matching game that also helps you learn the Hex and RGB colors which you are looking at!
-##How to Play
+## How to Play
 1. Select the number of pairs you wish to match.
 2. Select how you want the color code to be displayed.
   - **No color Code** will not display any hints. Similar colors may be difficult to match.
