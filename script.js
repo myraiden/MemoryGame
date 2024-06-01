@@ -29,6 +29,7 @@ let matchesPossible=0;
 let matchesCompleted=0;
 let score=0;
 let bestScore=JSON.parse(localStorage.getItem('memorygameBestScore'));
+  if(bestScore==null){bestScore=[];};
 
 //this function generates a single color and passes back
 //  the color both as a rgb value and a hex value
@@ -41,11 +42,12 @@ function generateColor(){
   let redHex=red.toString(16);
     if(redHex.length <2){redHex=`0${redHex}`;};
   let blueHex=red.toString(16);
-  if(blueHex.length <2){blueHex=`0${blueHex}`;};
+    if(blueHex.length <2){blueHex=`0${blueHex}`;};
   let greenHex=red.toString(16);
-  if(greenHex.length <2){greenHex=`0${greenHex}`;};
+    if(greenHex.length <2){greenHex=`0${greenHex}`;};
   let finalHex=`#${redHex}${greenHex}${blueHex}`
   return [rgbString,finalHex];
+  
   
 }
 //new code that allows the user to set the number of cards to select
@@ -75,9 +77,9 @@ resetGame.addEventListener('click',function(e){
   COLORS=[];
     //get how the user wants the name of the color to display 
   generateCardArray(numberOfCards.value);
-  matchesPossible=COLORS.length/2;
+  matchesPossible=numberOfCards.value/2;
   //show the best score
-  if(bestScore[matchesPossible]===null){
+  if(bestScore[matchesPossible]===null || bestScore[matchesPossible]===undefined){
     showBestScore.value='';
   }else{
     showBestScore.value=parseInt(bestScore[matchesPossible]);
