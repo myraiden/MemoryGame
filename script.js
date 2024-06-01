@@ -39,8 +39,11 @@ function generateColor(){
 
   let rgbString=`rgb(${red.toString()},${blue},${green})`;
   let redHex=red.toString(16);
+    if(redHex.length <2){redHex=`0${redHex}`;};
   let blueHex=red.toString(16);
+  if(blueHex.length <2){blueHex=`0${blueHex}`;};
   let greenHex=red.toString(16);
+  if(greenHex.length <2){greenHex=`0${greenHex}`;};
   let finalHex=`#${redHex}${greenHex}${blueHex}`
   return [rgbString,finalHex];
   
