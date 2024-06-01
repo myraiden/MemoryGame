@@ -79,7 +79,7 @@ resetGame.addEventListener('click',function(e){
   generateCardArray(numberOfCards.value);
   matchesPossible=numberOfCards.value/2;
   //show the best score
-  if(bestScore[matchesPossible]===null || bestScore[matchesPossible]===undefined){
+  if(bestScore[matchesPossible]===''){
     showBestScore.value='';
   }else{
     showBestScore.value=parseInt(bestScore[matchesPossible]);
